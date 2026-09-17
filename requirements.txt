@@ -1,0 +1,12 @@
+# Reference versions from the original benchmark environment (Python 3.10).
+# Install the appropriate CPU/CUDA PyTorch build first; see README.md.
+torch==2.2.2
+numpy==1.26.4
+scipy==1.10.1
+scikit-learn==1.6.0
+pandas==2.2.3
+einops==0.8.1
+geoopt==0.5.1
+sympy==1.12
+torch-geometric==2.6.1
+xgboost==3.2.0
