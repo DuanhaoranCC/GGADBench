@@ -1,0 +1,79 @@
+# Third-party attribution
+
+This benchmark includes adapted upstream code and paper-based implementations.
+Each component retains its own license. No project-wide license is assigned.
+The four upstream license files below retain the copyright holders and MIT terms.
+License texts not included in this directory must be obtained from the authors
+before redistribution; citations alone do not grant permission to reuse code.
+
+## Included upstream license texts
+
+| Component | Benchmark location | Upstream license file | Included license |
+| --- | --- | --- | --- |
+| UNPrompt | `ggad/vendor/unprompt/` | `UNPrompt/LICENSE` | [MIT](UNPrompt-LICENSE.txt) |
+| Zero-GAD | `ggad/vendor/zerogad/` | `Zero-GAD/LICENSE` | [MIT](Zero-GAD-LICENSE.txt) |
+| GAD-MoRE | `ggad/vendor/gadmore/` | `GAD-MoRE-main/LICENSE` | [MIT](GAD-MoRE-LICENSE.txt) |
+| BRIDGE | `gfm/vendor/bridge/` | `BRIDGE/LICENSE` | [MIT](BRIDGE-LICENSE.txt) |
+
+The GAD-MoRE README also acknowledges the
+[ARC implementation](https://github.com/yixinliu233/ARC). Its included MIT file
+does not establish the license of separately copied ARC code.
+
+## Generalist graph anomaly detection implementations
+
+| Method | Benchmark location | Reference | Included license |
+| --- | --- | --- | --- |
+| ARC | `ggad/vendor/arc/` | [ARC: A Generalist Graph Anomaly Detector with In-Context Learning](https://arxiv.org/pdf/2405.16771) | License text not included. |
+| IA-GGAD | `ggad/vendor/iaggad/` | *IA-GGAD: Zero-shot Generalist Graph Anomaly Detection via Invariant and Affinity Learning* | License text not included. |
+| AnomalyGFM | `ggad/vendor/anomalygfm/` | [AnomalyGFM: Graph Foundation Model for Zero/Few-shot Anomaly Detection](https://arxiv.org/abs/2502.09254) | License text not included. |
+| DR-GGAD | `ggad/vendor/drggad/` | *DR-GGAD: Dual Residual Centering for Mitigating Anomaly Non-Discriminativity in Generalist Graph Anomaly Detection* | License text not included. |
+| GAD-MoRE | `ggad/vendor/gadmore/` | [Zero-shot Generalizable Graph Anomaly Detection with Mixture of Riemannian Experts](https://arxiv.org/abs/2602.06859) | MIT text included above. |
+| UNPrompt | `ggad/vendor/unprompt/` | [Zero-shot Generalist Graph Anomaly Detection with Unified Neighborhood Prompts](https://arxiv.org/pdf/2410.14886) | MIT text included above. |
+| Zero-GAD | `ggad/vendor/zerogad/` | *Breaking Semantic Barriers: A Zero-Shot Generalized Framework for Graph Anomaly Detection* | MIT text included above. |
+| OWLEYE | `ggad/vendor/owleye/` | *OWLEYE: Zero-Shot Learner for Cross-Domain Graph Data Anomaly Detection* | License text not included. |
+| ProMoS | `ggad/vendor/promos/` | *Generalist Graph Anomaly Detection via Prototype-Based Distillation* | License text not included. |
+| REFI-GAD | `ggad/vendor/refigad/` | REFI-GAD | License text not included. |
+| TA-GGAD | `ggad/vendor/taggad/` | *TA-GGAD: Testing-time Adaptive Graph Model for Generalist Graph Anomaly Detection* | License text not included. |
+| TFM4GAD | `ggad/vendor/tfm4gad/` | *Tabular Foundation Models are Strong Graph Anomaly Detectors* | Upstream README declares Apache-2.0; license text not included. TabPFN and its weights have separate terms; see below. |
+
+## Paper-based implementations
+
+| Method | Benchmark location | Reference |
+| --- | --- | --- |
+| NeighborDiv | `ggad/vendor/neighbordiv/` | arXiv:2605.20879v1 |
+| TPCA-GAD | `ggad/vendor/tpcagad/` | *TPCA-GAD: Topology preference-consistency aggregation for zero-shot graph anomaly detection* |
+| SAARCS | `ggad/vendor/saarcs/` | *Multi-dimensional Adaptive Mix-hop Contextual Learning Framework for Universal Graph Anomaly Detection* |
+| MDGPT | `gfm/vendor/mdgpt/` | arXiv:2405.13934v4 |
+
+## Graph foundation model implementations
+
+| Method | Benchmark location | Reference | Included license |
+| --- | --- | --- | --- |
+| GraphPrompt | `gfm/runners/graphprompt.py` | [GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks](https://arxiv.org/pdf/2302.08043.pdf) | License text not included. |
+| SAMGPT | `gfm/runners/samgpt.py` | [SAMGPT: Text-free Graph Foundation Model for Multi-domain Pre-training and Cross-domain Adaptation](https://arxiv.org/abs/2502.05424) | License text not included. |
+| BRIDGE | `gfm/vendor/bridge/` | BRIDGE | MIT text included above. |
+| MDGFM | `gfm/vendor/mdgfm/` | *Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment* | License text not included. |
+
+## Baselines
+
+| Method | Benchmark location | Reference | Included license |
+| --- | --- | --- | --- |
+| CoLA | `baselines/cola.py` | `TrustAGI-Lab/CoLA` (Liu et al., TNNLS 2021); adapted neighborhood sampler. | License text not included. |
+| DOMINANT | `baselines/dominant.py` | [Deep Anomaly Detection on Attributed Networks](http://www.public.asu.edu/~kding9/pdf/SDM2019_Deep.pdf) | License text not included. |
+| TAM | `baselines/tam.py` | [Truncated Affinity Maximization: One-class Homophily Modeling for Graph Anomaly Detection](https://arxiv.org/pdf/2306.00006.pdf) | License text not included. |
+| BWGNN | `baselines/bwgnn.py` | [Rethinking Graph Neural Networks for Anomaly Detection](https://proceedings.mlr.press/v162/tang22b.html) | License text not included. |
+| GHRN | `baselines/ghrn.py` | *Addressing Heterophily in Graph Anomaly Detection: A Perspective of Graph Spectrum* | License text not included. |
+| RF-Graph / XGB-Graph | `baselines/tree_graph.py` | [GADBench](https://github.com/squareRoot3/GADBench) | License text not included. |
+
+Other baselines use separately installed packages such as PyTorch, PyTorch
+Geometric, scikit-learn, and XGBoost. Those dependencies retain their own licenses;
+the four copied license files above do not cover them.
+
+## TabPFN package and model weights
+
+TFM4GAD uses the separately installed TabPFN package and can download a
+TabPFN-v2 checkpoint. The upstream TFM4GAD README points to the
+[Prior Labs license](https://priorlabs.ai/tabpfn-license/) for TabPFN weights.
+No checkpoint, model license grant, or dataset license grant is included in
+this release folder. Package code, copied source, model weights, and datasets
+must each be used under their respective terms.
